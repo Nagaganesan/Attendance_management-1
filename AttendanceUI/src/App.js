@@ -10,9 +10,7 @@ import './App.css';
   const handleFormChange = (event, index) => {
     let data = [...formFields];
     data[index][event.target.name] = event.target.value;
-    data[index][event.target.address] = event.target.value;
-    data[index][event.target.mobile] = event.target.value;
-    data[index][event.target.designation] = event.target.value;
+   
     
     setFormFields(data);
     
@@ -34,20 +32,12 @@ import './App.css';
   }
   function saveData()
 {
-  //let data={Designation,name,Address,Mobileno}
- let data = [...formFields];
- /*let data={
-  "name":"gavin",
-  "mobile":"8937443323",
-  "designation":"Developer",
-  "address":"no 12,near shanmuga hospitals,salem-632810"
-
-}*/
-fn[{"name":"test","address":"salem","mobile":"98765442424","designation":"software","undefined":"software"}]
-
+  
+ let data = {...formFields};
+ 
 console.log("save fn"+JSON.stringify(data));
 console.log("hi")
-fetch("http://127.0.0.1:8000/ad/add", {
+fetch("http://localhost:8000/attendance/addemp", {
     method: "POST",
     headers: {
       'Accept': 'application/json',
