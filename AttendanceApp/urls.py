@@ -3,6 +3,7 @@ from pickle import FROZENSET
 from django.conf.urls import url
 from django.urls import path, include
 from AttendanceApp import views
+from AttendanceApp.Views.deteteemp import DeleteEmp
 from AttendanceApp.Views.retrieveemp import RetriveEmp
 from .views import EmployeeView
 from django.conf.urls.static import static
@@ -14,6 +15,7 @@ urlpatterns=[
 
     path('addemp',EmployeeView.as_view()),
     path('showemp',RetriveEmp.as_view()),
+    path('delemp',DeleteEmp.as_view()),
 
 
     
