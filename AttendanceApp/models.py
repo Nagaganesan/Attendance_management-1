@@ -7,3 +7,4 @@ class Employee(models.Model):
     mobile = models.CharField(max_length=500)
     designation    = models.CharField(max_length=500)
     address  = models.CharField(max_length=500)
+   
