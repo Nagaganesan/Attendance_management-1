@@ -1,6 +1,6 @@
 from curses.ascii import EM
 from rest_framework import serializers
-from AttendanceApp.models import Employee,Face
+from AttendanceApp.models import Employee
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
